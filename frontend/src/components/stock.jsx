@@ -28,7 +28,7 @@ const StockDataApp = () => {
     if (selectedStock) {
         try {
             setLoading(true);
-            const response = await fetch("https://predictor-9gn0.onrender.com/getStockData", {
+            const response = await fetch("https://predictor-aps7.onrender.com/getStockData", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

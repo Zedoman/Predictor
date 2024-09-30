@@ -30,7 +30,7 @@ const NewsPage = () => {
           localStorage.removeItem("newsDataDate");
         }
     
-        const response = await fetch("https://predictor-9gn0.onrender.com/alpha", {
+        const response = await fetch("https://predictor-aps7.onrender.com/alpha", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",

@@ -18,35 +18,7 @@ const downloadStockData = (stockData) => {
     console.error('Error downloading stock data:', error);
   }
 };
-// const downloadStockData2 = (stockData) => {
-//   try {
-//     const csvContent = Papa.unparse(stockData, {
-//       header: true, // Include headers in the CSV
-//       quotes: true, // Add quotes around values
-//     });
 
-//     // Create a Blob with the CSV content
-//     const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8' });
-
-//     // Create a download link
-//     const link = document.createElement('a');
-//     link.href = window.URL.createObjectURL(blob);
-
-//     // Set the download attribute and file name
-//     link.setAttribute('download', 'StockData.csv');
-
-//     // Append the link to the document
-//     document.body.appendChild(link);
-
-//     // Trigger the click event to start the download
-//     link.click();
-
-//     // Remove the link from the document
-//     document.body.removeChild(link);
-//   } catch (error) {
-//     console.error('Error downloading stock data:', error);
-//   }
-// };
 
 
 const StockDataTable = ({ stockData }) => {

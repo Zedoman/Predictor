@@ -14,7 +14,7 @@ combined_args = sys.argv[1:]
 start, end, stock_symbol = combined_args
 
 def predict_stock_prices(start,end,stock_symbol):
-    df = yf.download(stock_symbol, start, end)
+    df = yf.download(stock_symbol+".NS", start, end)
     df1=df.reset_index()['Close']
 
     scaler= MinMaxScaler(feature_range=(0,1))

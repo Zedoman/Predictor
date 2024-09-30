@@ -19,7 +19,7 @@ start,end,stock_symbol = combined_args.split(',')
 print(start,end,stock_symbol)
 
 def predict_stock_prices(start,end,stock_symbol,ttldays = 30):
-    df = yf.download(stock_symbol, start, end)
+    df = yf.download(stock_symbol+".NS", start, end)
     df1=df.reset_index()['Close']
 
     scaler= MinMaxScaler(feature_range=(0,1))

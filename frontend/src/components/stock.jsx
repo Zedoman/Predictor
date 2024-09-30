@@ -28,13 +28,13 @@ const StockDataApp = () => {
     if (selectedStock) {
         try {
             setLoading(true);
-            const response = await fetch("http://localhost:3001/getStockData", {
+            const response = await fetch("https://predictor-9gn0.onrender.com/getStockData", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
-                    stockSymbol: selectedStock.symbol,
+                    stockSymbol: selectedStock.symbol+".NS",
                     startDate: startDate,
                     endDate: endDate,
                 }),
